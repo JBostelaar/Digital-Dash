@@ -1,0 +1,18 @@
+.header {
+	height: 60px;
+	background: $lblue;
+	text-align: center;
+
+	&__logo {
+		color: #fff;
+		line-height: 60px;
+		margin: 0;
+		font-weight: 400;
+		font-size: 22px;
+		color: $dblue;
+
+		i {
+			margin-right: 5px;
+		}
+	}
+}

@@ -7,8 +7,8 @@ const cssnano    = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('styles', () => {
-  
-	gulp.src('./src/client/styles/*.scss')
+
+	gulp.src('./src/client/styles/**/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(cssnano())
 		.pipe(sourcemaps.write('.'))

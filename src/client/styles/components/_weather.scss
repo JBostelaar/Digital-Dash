@@ -1,0 +1,70 @@
+.weather {
+	width: 50%;
+
+	&__icon {
+		text-align: center;
+		font-size: 90px;
+		display: block;
+		color: $dblue;
+	}
+
+	&__meta {
+		display: flex;
+		margin-top: 10px;
+		justify-content: center;
+	}
+
+	&__temp {
+		color: $dblue;
+		font-size: 100px;
+		font-weight: 100;
+		margin: 0;
+		width: 100px;
+		height: 130px;
+		text-align: center;
+		font-family: 'dosis';
+		line-height: 90px;
+		position: relative;
+
+		.current, .range {
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 1;
+			transition: opacity .5s ease;
+		}
+
+		.range {
+			opacity: 0;
+			font-size: 52px;
+			font-weight: 400;
+		}
+
+		&:hover {
+			.current {
+				opacity: 0;
+			}
+
+			.range {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__place, &__type {
+		color: $dblue;
+		font-weight: 300;
+		font-size:30px;
+		margin: 0;
+	}
+
+	&__place {
+		letter-spacing: 2px;
+	}
+
+	&__type {
+		margin: 0;
+		font-weight: 400;
+		font-size: 40px;
+	}
+}
