@@ -2,7 +2,8 @@
 
 import 'isomorphic-fetch';
 
-import React from 'react';
+import config from 'client/config'
+import React  from 'react';
 
 class Weather extends React.Component {
 	constructor() {
@@ -22,7 +23,8 @@ class Weather extends React.Component {
 	}
 
 	fetchData() {
-		const url = 'http://api.openweathermap.org/data/2.5/weather?q=Amsterdam,nl&appid=722162d16627192f64477351d1669218&units=metric';
+		const url = config.weather.endpoint + '?q=Amsterdam,nl&appid=' +
+			config.weather.appId + '&units=metric';
 
 		fetch(url).then( r => r.json())
 			.then( data => {
