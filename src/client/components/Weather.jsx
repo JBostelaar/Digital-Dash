@@ -1,9 +1,7 @@
-'use strict';
-
 import 'isomorphic-fetch';
 
-import config from 'client/config'
-import React  from 'react';
+import config from 'client/config';
+import React from 'react';
 
 class Weather extends React.Component {
 	constructor() {
@@ -15,7 +13,7 @@ class Weather extends React.Component {
 			place: null,
 			temp_min: null,
 			temp_max: null,
-		}
+		};
 	}
 
 	componentDidMount() {
@@ -23,17 +21,17 @@ class Weather extends React.Component {
 	}
 
 	fetchData() {
-		const url = config.weather.endpoint + '?q=Amsterdam,nl&appid=' +
-			config.weather.appId + '&units=metric';
+		const url = `${config.weather.endpoint}?q=Amsterdam,nl&appid=
+			${config.weather.appId}&units=metric`;
 
-		fetch(url).then( r => r.json())
-			.then( data => {
+		fetch(url).then(r => r.json())
+			.then(data => {
 				this.setState({
 					temp: Math.round(data.main.temp),
 					temp_min: Math.round(data.main.temp_min),
 					temp_max: Math.round(data.main.temp_max),
 					place: data.name,
-					desc: data.weather[0].main
+					desc: data.weather[0].main,
 				});
 			});
 	}
@@ -58,7 +56,7 @@ class Weather extends React.Component {
 					</div>
 				</div>
 			</section>
-		)
+		);
 	}
 }
 

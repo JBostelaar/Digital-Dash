@@ -1,5 +1,3 @@
-'use strict';
-
 export default function renderFullPage(html) {
 	return (
 	`<!doctype html>

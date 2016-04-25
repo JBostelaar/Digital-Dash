@@ -1,8 +1,5 @@
-'use strict';
-
-import React  from 'react';
+import React from 'react';
 import moment from 'moment';
-
 
 class Time extends React.Component {
 	constructor() {
@@ -10,8 +7,8 @@ class Time extends React.Component {
 
 		this.state = {
 			time: moment(new Date).format('HH:mm:ss'),
-			date: moment(new Date).format('dddd DD MMMM')
-		}
+			date: moment(new Date).format('dddd DD MMMM'),
+		};
 	}
 
 	componentDidMount() {
@@ -26,7 +23,7 @@ class Time extends React.Component {
 
 	incrementTimer() {
 		const time = moment(new Date).format('HH:mm:ss');
-		this.setState({time: time});
+		this.setState({ time });
 	}
 
 	render() {
@@ -35,7 +32,7 @@ class Time extends React.Component {
 				<h2 className="timer__time">{this.state.time}</h2>
 				<h3 className="timer__date">{this.state.date}</h3>
 			</div>
-		)
+		);
 	}
 }
 
