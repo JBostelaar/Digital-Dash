@@ -1,10 +1,3 @@
-# Plain JS Boilerplate
+# Digital Dash
 
-* Gulp
-* Browserify
-* Babel
-* Symlink
-* Nodemon
-* Express
-* SCSS
-
+Metro Boomin' want some more
