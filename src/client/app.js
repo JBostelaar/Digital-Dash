@@ -1,6 +1,9 @@
 'use strict';
 
+import Dashboard from 'client/components/Dashboard';
 import React from 'react';
-import renderPage from './utils/renderPage';
+import {render} from 'react-dom';
 
-renderPage();
+render(
+	<Dashboard />, document.getElementById('app')
+);

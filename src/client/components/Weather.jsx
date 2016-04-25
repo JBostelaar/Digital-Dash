@@ -1,9 +1,11 @@
 'use strict';
 
+import 'isomorphic-fetch';
+
 import React from 'react';
 
 class Weather extends React.Component {
-	constructor () {
+	constructor() {
 		super();
 
 		this.state = {
@@ -13,7 +15,9 @@ class Weather extends React.Component {
 			temp_min: null,
 			temp_max: null,
 		}
+	}
 
+	componentDidMount() {
 		this.fetchData();
 	}
 

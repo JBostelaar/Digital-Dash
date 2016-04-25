@@ -23,11 +23,14 @@ gulp.task('babel', () => {
 		} else {
 			gutil.log(`${c.cyan('babel')}: converting`);
 		}
-		
+
 		return gulp.src(runSrc, { base: 'src' })
-			.pipe(babel({
-				presets: [ 'es2015', 'react' ]
-			}))
+			.pipe(babel())
+			.on('error', function handleError(err) {
+	            gutil.log(`${c.cyan('babel')}: ${c.red('an error occured')}`);
+	            console.error(err.stack);
+	            this.emit('end');
+	        })
 			.pipe(gulp.dest('dist'));
 	}
 

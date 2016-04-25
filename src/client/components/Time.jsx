@@ -12,7 +12,9 @@ class Time extends React.Component {
 			time: moment(new Date).format('HH:mm:ss'),
 			date: moment(new Date).format('dddd DD MMMM')
 		}
+	}
 
+	componentDidMount() {
 		this.startTimer();
 	}
 

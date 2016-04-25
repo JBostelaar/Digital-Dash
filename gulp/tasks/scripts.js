@@ -16,7 +16,7 @@ gulp.task('scripts', () => {
 			'./src/client/app.js', {
 			extensions: ['.jsx'],
 			debug: true}
-		).transform("babelify", {presets: ["es2015", "react"]});
+		).transform("babelify");
 
 	if(gutil.env.dev){
 		watchify(bundler);
