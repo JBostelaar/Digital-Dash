@@ -1,8 +1,10 @@
 @import '../../../node_modules/normalize.css/normalize';
 
 @import 'utils/variables';
+@import 'utils/mixins';
 
 @import 'components/base';
 @import 'components/header';
+@import 'components/hue';
 @import 'components/time';
 @import 'components/weather';

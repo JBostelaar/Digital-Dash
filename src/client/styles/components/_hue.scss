@@ -1,0 +1,78 @@
+.hue {
+	position: absolute;
+	right: 25px;
+	bottom: 50px;
+	width: 100px;
+	height: calc(100vh - 160px);
+	text-align: center;
+
+	&__icon, &__scene {
+		color: $dblue;
+		font-size: 50px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: block;
+		width: 100%;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	&__scene {
+		font-size: 30px;
+		line-height: 30px;
+		opacity: 0;
+
+		&--1 {
+			bottom: 70px;
+		}
+
+		&--2 {
+			bottom: 120px;
+		}
+
+		&--3 {
+			bottom: 170px;
+		}
+
+		&--4 {
+			bottom: 230px;
+		}
+	}
+
+	&.active {
+		.hue__scene {
+			&--1 {
+				@include animate(pulsate, .3s, 0, 1, ease, forwards);
+			}
+
+			&--2 {
+				@include animate(pulsate, .3s, .1s, 1, ease, forwards);
+			}
+
+			&--3 {
+				@include animate(pulsate, .3s, .2s, 1, ease, forwards);
+			}
+
+			&--4 {
+				@include animate(pulsate, .3s, .3s, 1, ease-out, forwards);
+			}
+
+		}
+	}
+}
+
+@include keyframes(pulsate) {
+	0% {
+		font-size: 15px;
+		opacity: 0;
+	}
+	80% {
+		font-size: 30px;
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		font-size: 25px;
+	}
+}
