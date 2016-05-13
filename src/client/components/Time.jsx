@@ -15,10 +15,18 @@ class Time extends React.Component {
 		this.startTimer();
 	}
 
+	componentWillUnmount() {
+		this.stopTimer();
+	}
+
 	startTimer() {
-		setInterval(() => {
+		this.timer = setInterval(() => {
 			this.incrementTimer();
 		}, 1000);
+	}
+
+	stopTimer() {
+		clearInterval(this.timer);
 	}
 
 	incrementTimer() {
