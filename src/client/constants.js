@@ -1,0 +1,3 @@
+export const SET_OPEN_SCENES = 'SET_OPEN_SCENES';
+
+export const SET_CLOSE_SCENES = 'SET_CLOSE_SCENES';
