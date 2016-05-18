@@ -1,11 +1,8 @@
-import Dashboard from 'client/components/Dashboard';
-import history from 'client/utils/history';
+import getRoutes from 'client/utils/getRoutes';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route } from 'react-router';
+import { Router, browserHistory } from 'react-router';
 
 render((
-	<Router history={history}>
-		<Route path="/" component={Dashboard} />
-	</Router>
+	<Router history={browserHistory} children={getRoutes()} />
 ), document.getElementById('app'));
